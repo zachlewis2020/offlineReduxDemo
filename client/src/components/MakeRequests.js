@@ -5,14 +5,25 @@ import {sendDataPOST, sendDataGET } from '../actions';
 class MakeRequests extends React.Component {
     constructor(props) {
         super(props)
+        this.state = { requestNum: 0 }
     }
 
     render() {
 
         return (
             <div>
-                <button onClick={() => this.props.onSendDataGet("From Get Button: " + new Date().toJSON())}>Test Get Data</button>
-                <button onClick={() => this.props.onSendDataPost("From post Button: " + new Date().toJSON())}>Test Post Data</button>
+                <button onClick={() => {
+                    this.setState((state) => ({
+                        requestNum: state.requestNum + 1
+                      }));
+                    return this.props.onSendDataGet("GET Request (" + this.state.requestNum + ") Get Button: " + new Date().toJSON())}
+                    }>Test Get Data</button>
+                <button onClick={() => {
+                    this.setState((state) => ({
+                        requestNum: state.requestNum + 1
+                      }));
+                      return this.props.onSendDataPost(this.state.requestNum + " Date " + new Date().toJSON())}
+                    }>Test Post Data</button>
             </div>
         );
     }

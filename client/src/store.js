@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import { offline, createOffline } from '@redux-offline/redux-offline';
 import defaultConfig from '@redux-offline/redux-offline/lib/defaults';
-import { sendDataPOST, sendDataGET, SEND_DATA_GET, SEND_DATA_POST } from '../src/actions';
+import { sendDataPOST, sendDataGET, SEND_DATA_GET } from '../src/actions';
 
 const initialState = {
   timer: 0

@@ -58,7 +58,7 @@ class App extends React.Component {
   }))
 
   render() {
-    const { page, status, payload, time } = this.state;
+    const { page} = this.state;
     graphql(schema, query).then((result) => {
       console.log(result);
     });

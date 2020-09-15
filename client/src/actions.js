@@ -40,7 +40,7 @@ function sendDataGET(sentData) {
     type: SEND_DATA_GET, payload: {sentData},
     meta: {
       offline: {
-        effect: { url: '/getTest?data=' + `${sentData}`, method: 'GET' },
+        effect: { url: `/getTest?data=${sentData}`, method: 'GET' },
         commit: { type: SEND_DATA_GET_SUCCESS },
         rollback: { type: SEND_DATA_GET_FAILED }
       }

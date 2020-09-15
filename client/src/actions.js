@@ -6,22 +6,6 @@ export const SEND_DATA_POST = 'SEND_DATA';
 export const SEND_DATA_POST_SUCCESS = 'SEND_DATA_SUCCESS';
 export const SEND_DATA_POST_FAILED = 'SEND_DATA_FAILED';
 
-/*  Not Needed for Demo
-function sendDataGetCreator(sentData) {
-  return {
-    type: SEND_DATA_GET,
-    payload: sentData
-  }
-}
-
-function sendDataPostCreator(sentData) {
-  return {
-    type: SEND_DATA_POST,
-    payload: sentData
-  }
-}
-*/
-
 function sendDataPOST(sentData) {
   return {
     type: SEND_DATA_POST, payload: { sentData },
